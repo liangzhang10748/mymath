@@ -96,7 +96,7 @@ class Score(object):
                     )
             )
 
-        print("You answered {0} times. You got {1} correct. Your accuracy is {2}%".format(
+        print("You answered {0} times. You got {1} correct. Your accuracy is {2} %".format(
                     self.total_answers,
                     self.correct_answers,
                     self.get_accuracy()
