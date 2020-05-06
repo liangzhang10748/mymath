@@ -13,26 +13,26 @@ class Exercise(object):
     def run(self):
         try:
             while True:
-                self.do_questions()
+                self.do_question()
         except KeyboardInterrupt:
             delta = datetime.now() - self.stime
             print("Exercise Summary:")
             print("You spent: {}".format(delta))
             self.score.print_summary()
 
-    def do_questions(self):
+    def do_question(self):
         question = self.question_type.generate_question(self.spec)
+        print("Question #{0}:".format(self.score.total_questions + 1))
 
-        first_try = True
         correctness = False
-        while not correctness:
+        allow_tries = 10
+        for attempt in range(allow_tries):
             correctness = self.answer_question(question)
             Answer.show_judgment(correctness)
 
-            self.score.register_answer(correctness, first_try)
+            self.score.register_answer(correctness, attempt == 0)
             if correctness:
                 break
-            first_try = False
 
     def answer_question(self, question):
         answer = Answer()
