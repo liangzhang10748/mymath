@@ -48,7 +48,7 @@ class Exercise(object):
             'min_second' : 0,
             'max_second' : 10,
             'min_final' : 0,
-            'max_final' : 10
+            'max_final' : 20
         }
 
         sub_spec = {
