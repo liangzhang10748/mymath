@@ -53,20 +53,20 @@ class Exercise(object):
 
         sub_spec = {
             'min_first' : 0,
-            'max_first' : 10,
+            'max_first' : 1000,
             'min_second' : 0,
-            'max_second' : 10,
+            'max_second' : 1000,
             'min_final' : 0,
-            'max_final' : 10
+            'max_final' : 1000
         }
 
         multi_spec = {
-            'min_first' : 0,
-            'max_first' : 10,
+            'min_first' : 10,
+            'max_first' : 20,
             'min_second' : 0,
             'max_second' : 10,
             'min_final' : 0,
-            'max_final' : 100
+            'max_final' : 400
         }
 
         div_spec = {
