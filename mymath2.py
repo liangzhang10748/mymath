@@ -44,11 +44,11 @@ class Exercise(object):
     def get_argv_options(cls, argv):
         add_spec = {
             'min_first' : 0,
-            'max_first' : 10,
+            'max_first' : 1000,
             'min_second' : 0,
-            'max_second' : 10,
+            'max_second' : 1000,
             'min_final' : 0,
-            'max_final' : 20
+            'max_final' : 2000
         }
 
         sub_spec = {
@@ -64,7 +64,7 @@ class Exercise(object):
             'min_first' : 10,
             'max_first' : 20,
             'min_second' : 0,
-            'max_second' : 10,
+            'max_second' : 20,
             'min_final' : 0,
             'max_final' : 400
         }
